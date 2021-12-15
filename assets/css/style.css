@@ -1,0 +1,143 @@
+/* Add todas as fontes. */
+@font-face {
+  font-family: 'Red Hat Display';
+  src: url(../fonts/BigShouldersDisplay-VariableFont_wght.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+:root {
+  /* Primary Color */
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  /* Neutral Color */
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+  --paragraph-size: 1rem;
+}
+
+body {
+  background-color: var(--pale-blue);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 375px;
+}
+#container-summary {
+  flex: 0 0 calc(100% - 30px);
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10% 15px 0 15px;
+  padding-bottom: 100px;
+  border-radius: 10px;
+}
+
+#container-summary li {
+  margin: 0 0 20px 0;
+}
+
+#container-summary #ilustraition-hero img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+#container-summary #title-summary {
+  font-family: sans-serif;
+  font-size: 1.25rem;
+  font-weight: 900;
+  text-align: center;
+  color: var(--dark-blue);
+}
+
+#container-summary #paragraph-summary {
+  font-size: var(--paragraph-size);
+  font-family: 'Red Hat Display';
+  font-weight: 500;
+  color: var(--desaturated-blue);
+  text-align: center;
+  letter-spacing: 1.5px;
+}
+
+#container-summary #container-price {
+  display: flex;
+  align-items: center;
+  background: var(--very-pale-blue);
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+#container-summary li:nth-child(4),
+#container-summary li:nth-child(5),
+#container-summary li:nth-child(6) {
+  flex: 0 0 calc(100% - 30px);
+  margin: 0 15px;
+}
+
+#container-price #price {
+  margin-right: 40px;
+}
+
+#container-price img {
+  margin-right: 20px;
+}
+
+#price #anual {
+  font-size: 0.89rem;
+  font-family: sans-serif;
+  font-weight: 700;
+  color: var(--dark-blue);
+}
+
+#price #value {
+  font-size: 0.89rem;
+  font-family: sans-serif;
+  font-weight: 500;
+  color: var(--desaturated-blue);
+}
+
+#container-summary li:nth-child(5) {
+  margin-top: 50px;
+}
+
+#container-price a {
+  font-family: sans-serif;
+  font-weight: 700;
+  font-size: 0.89rem;
+  text-decoration: underline;
+  color: var(--bright-blue);
+}
+
+#container-summary #payment {
+  background: var(--bright-blue);
+  color: var(--pale-blue);
+  font-family: sans-serif;
+  font-weight: 700;
+  padding: 20px 65px;
+  max-width: 200px;
+  border-radius: 10px;
+}
