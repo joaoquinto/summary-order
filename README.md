@@ -1,4 +1,3 @@
-# Frontend Mentor - Order summary card
 
 # Tecnologias usadas
 
