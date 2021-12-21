@@ -1,9 +1,3 @@
-/* Add todas as fontes. */
-@font-face {
-  font-family: 'Red Hat Display';
-  src: url(../fonts/BigShouldersDisplay-VariableFont_wght.ttf);
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -37,17 +31,22 @@ a {
 
 body {
   background-color: var(--pale-blue);
+  background-image: url('../images/pattern-background-desktop.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top center;
 }
 
 main {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+  align-items: center;
   width: 100%;
-  max-width: 375px;
 }
+
 #container-summary {
   flex: 0 0 calc(100% - 30px);
+  max-width: 375px;
   background-color: #fff;
   display: flex;
   flex-direction: column;
@@ -67,10 +66,11 @@ main {
 }
 
 #container-summary #title-summary {
-  font-family: sans-serif;
+  font-family: 'Red Hat Display', sans-serif;
   font-size: 1.25rem;
   font-weight: 900;
   text-align: center;
+  text-transform: capitalize;
   color: var(--dark-blue);
 }
 
@@ -81,6 +81,8 @@ main {
   color: var(--desaturated-blue);
   text-align: center;
   letter-spacing: 1.5px;
+  width: 300px;
+  max-width: 350px;
 }
 
 #container-summary #container-price {
@@ -95,11 +97,16 @@ main {
 #container-summary li:nth-child(5),
 #container-summary li:nth-child(6) {
   flex: 0 0 calc(100% - 30px);
-  margin: 0 15px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+#container-price {
+  width: 283px;
 }
 
 #container-price #price {
-  margin-right: 40px;
+  margin-right: 20px;
 }
 
 #container-price img {
@@ -108,36 +115,56 @@ main {
 
 #price #anual {
   font-size: 0.89rem;
-  font-family: sans-serif;
+  font-family: 'Red Hat Display', sans-serif;
   font-weight: 700;
   color: var(--dark-blue);
 }
 
 #price #value {
   font-size: 0.89rem;
-  font-family: sans-serif;
+  font-family: 'Red Hat Display', sans-serif;
   font-weight: 500;
   color: var(--desaturated-blue);
 }
 
-#container-summary li:nth-child(5) {
-  margin-top: 50px;
-}
-
 #container-price a {
-  font-family: sans-serif;
+  font-family: 'Red Hat Display', sans-serif;
   font-weight: 700;
   font-size: 0.89rem;
   text-decoration: underline;
   color: var(--bright-blue);
 }
 
+#container-price a:hover {
+  color: hsl(245, 83%, 69%);
+  text-decoration: none;
+}
+
 #container-summary #payment {
-  background: var(--bright-blue);
-  color: var(--pale-blue);
-  font-family: sans-serif;
+  font-family: 'Red Hat Display', sans-serif;
   font-weight: 700;
-  padding: 20px 65px;
-  max-width: 200px;
+  text-align: center;
+  color: var(--very-pale-blue);
+  background: var(--bright-blue);
+  display: block;
+  padding: 20px 45px;
+  width: 283px;
   border-radius: 10px;
+  box-shadow: 0 30px 15px hsl(225, 100%, 94%);
+}
+
+#container-summary #payment:hover {
+  background: hsl(245, 83%, 69%);
+}
+
+#container-summary #cancel {
+  display: inline-block;
+  margin-top: 5px;
+  font-family: 'Red Hat Display', sans-serif;
+  color: var(--desaturated-blue);
+  font-weight: 900;
+}
+
+#container-summary #cancel:hover {
+  color: var(--dark-blue);
 }
