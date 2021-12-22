@@ -47,6 +47,7 @@ main {
 #container-summary {
   flex: 0 0 calc(100% - 30px);
   max-width: 375px;
+  max-height: 600px;
   background-color: #fff;
   display: flex;
   flex-direction: column;
